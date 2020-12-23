@@ -11,6 +11,10 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-        }
+		}
+		stage('Deploy in staging') {
+			build job: 'Deploy_ambiente_test'
+		}
+        
     }
 }
