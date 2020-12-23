@@ -27,5 +27,10 @@ pipeline {
                         echo "Deploying in Production Area"
                   }
             }
+			stage('Deploy alla brutto dio') {
+                  steps {
+                        echo "ALLA BRUTTO DIO"
+                  }
+            }
       }
 }
