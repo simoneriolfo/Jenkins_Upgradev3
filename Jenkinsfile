@@ -17,6 +17,11 @@ pipeline {
                         echo "Deploying in Staging Area"
                   }
             }
+			stage('Deploy in ambiente frillo') {
+                  steps {
+                        echo "Deploying in Ambiente frillo"
+                  }
+            }
             stage('Deploy Production') {
                   steps {
                         echo "Deploying in Production Area"
