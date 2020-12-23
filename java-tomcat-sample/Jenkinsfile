@@ -19,5 +19,15 @@ pipeline {
             }
             
         }
+		stage('Deploy in Produzione'){
+            steps{
+				timeout(time:5, unit:'DAYS'){
+					input message: 'APPROVARE PRODUSSIONE?'
+				}
+            
+				build job: 'Deploy_ambiente_produzione'
+			}
+		}
 	}
+	
 }
